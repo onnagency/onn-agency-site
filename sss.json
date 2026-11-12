@@ -1,0 +1,32 @@
+{
+  "sorular": [
+    {
+      "soru": "Siteniz kaç günde hazır olur?",
+      "cevap": "Talepleriniz doğrultusunda 3 ila 8 gün içinde yayında olur. Süre; logo, metin ve fotoğraflar bize ulaştığı gün başlar."
+    },
+    {
+      "soru": "Ödemeyi nasıl yapıyorum?",
+      "cevap": "Kurulum ücretinin %50’sini başlangıçta, kalan %50’sini siteniz yayına alınmadan önce ödersiniz. Prestij ve reklam yönetimi gibi aylık hizmetler her ayın başında faturalandırılır. Fiyatlara KDV dahil değildir."
+    },
+    {
+      "soru": "Alan adını kim alıyor?",
+      "cevap": "Alan adı sizin adınıza alınır ve ücreti size aittir. Satın alma, bağlama ve yayına alma işlerini biz yaparız; sitenizin yayında kalması için ayrıca barındırma ücreti ödemezsiniz."
+    },
+    {
+      "soru": "Site tamamen benim mi olacak?",
+      "cevap": "Evet. Teslim ettiğimiz sitenin tasarımı, içeriği ve alan adının tüm hakları size aittir. İsterseniz site dosyalarını da teslim ederiz."
+    },
+    {
+      "soru": "Bakım ne demek, almak zorunda mıyım?",
+      "cevap": "Bakım; yıl içindeki küçük metin, fotoğraf, fiyat ve saat güncellemelerini ve sitenin sorunsuz çalışmasını kapsar. Vitrin’de isteğe bağlıdır, Sahne’de ilk yıl, Prestij’de her zaman dahildir. Bakım almayan sitelerde sonradan istenen değişiklikler ayrıca fiyatlandırılır."
+    },
+    {
+      "soru": "Metinleri ve fotoğrafları kim hazırlıyor?",
+      "cevap": "Metinleri sizinle konuşarak biz yazıyoruz. Fotoğraflarınızı gönderebilir ya da yerinde çekim yapan ürün fotoğrafı hizmetimizden yararlanabilirsiniz."
+    },
+    {
+      "soru": "Reklam bütçesi ne kadar olmalı?",
+      "cevap": "Başlangıç için aylık 3.000 TL öneriyoruz. Bütçeyi doğrudan Google’a ve Meta’ya siz ödersiniz; biz yönetim ücretiyle kampanyaları kurar, takip eder ve her hafta raporlarız."
+    }
+  ]
+}

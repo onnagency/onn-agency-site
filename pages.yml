@@ -1,0 +1,81 @@
+# ONN Agency içerik paneli (Pages CMS): app.pagescms.org
+media:
+  input: src/assets/img/yuklemeler
+  output: /assets/img/yuklemeler
+
+content:
+  - name: fiyatlar
+    label: Fiyatlar
+    type: file
+    path: content/fiyatlar.json
+    format: json
+    fields:
+      - name: paketler
+        label: Paketler
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{ad} · {fiyat}"
+        fields:
+          - { name: ad, label: Paket adı, type: string, required: true }
+          - { name: kimin_icin, label: Kimin için, type: text }
+          - { name: fiyat, label: Fiyat, type: string, description: "Örnek: 5.999 TL" }
+          - { name: fiyat_birimi, label: Fiyat birimi, type: string, description: "Örnek: kurulum ya da / ay" }
+          - { name: fiyat_alt_yazi, label: Fiyatın altındaki yazı, type: string, description: "Kalın yazmak için iki yıldız arasına alın: **yıllık 1.499 TL**" }
+          - { name: ozellikler, label: Özellikler, type: string, list: true }
+          - { name: one_cikan, label: Öne çıkan paket, type: boolean, description: "Açıksa kart koyu renkte ve turuncu butonlu görünür" }
+          - { name: rozet, label: Rozet yazısı, type: string, description: "Örnek: En kapsamlı. Boş bırakılabilir." }
+      - { name: ortak_not, label: Kartların altındaki ortak not, type: text }
+      - name: karsilastirma
+        label: Karşılaştırma tablosu
+        description: "Olmayan özellik için hücreye Yok yazın, gri görünür."
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{ozellik}"
+        fields:
+          - { name: ozellik, label: Özellik, type: string }
+          - { name: vitrin, label: Vitrin, type: string }
+          - { name: sahne, label: Sahne, type: string }
+          - { name: prestij, label: Prestij, type: string }
+      - name: ek_hizmetler
+        label: Ek hizmetler
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{ad} · {fiyat}"
+        fields:
+          - { name: ad, label: Hizmet adı, type: string }
+          - { name: fiyat, label: Fiyat, type: string }
+          - { name: fiyat_notu, label: Fiyat notu, type: string, description: "Örnek: Prestij paketinde 3.999 TL. Boş bırakılabilir." }
+          - { name: aciklama, label: Açıklama, type: text }
+          - { name: buton_yazisi, label: Buton yazısı, type: string, default: "Teklif alın" }
+      - { name: notlar, label: Fiyat notları, type: text, list: true }
+
+  - name: sss
+    label: Sıkça sorulanlar
+    type: file
+    path: content/sss.json
+    format: json
+    fields:
+      - name: sorular
+        label: Sorular
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{soru}"
+        fields:
+          - { name: soru, label: Soru, type: string }
+          - { name: cevap, label: Cevap, type: text }
+
+  - name: iletisim
+    label: İletişim
+    type: file
+    path: content/iletisim.json
+    format: json
+    fields:
+      - { name: whatsapp, label: WhatsApp numarası, type: string, description: "Başında + olmadan, ülke koduyla: 905511669603. Fiyat butonlarındaki WhatsApp bağlantıları bunu kullanır." }

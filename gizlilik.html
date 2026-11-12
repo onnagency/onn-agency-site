@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik ve Çerez Politikası — ONN Agency</title>
+<meta name="description" content="ONN Agency web sitesinin kişisel veriler ve çerez kullanımına ilişkin aydınlatma metni.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0E3B43">
+<link rel="icon" href="assets/favicon.png" type="image/png" sizes="512x512">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;600&display=swap">
+<style>
+body{margin:0;background:#F2EDE4;color:#0E3B43;font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:40px 24px 80px}
+a{color:#B8431F;font-weight:600}
+.back{display:inline-flex;gap:8px;align-items:center;text-decoration:none;margin-bottom:40px}
+h1{font-family:"Space Grotesk",Arial,sans-serif;font-size:clamp(32px,6vw,48px);line-height:1.1;letter-spacing:-.02em;margin:0 0 12px}
+h2{font-family:"Space Grotesk",Arial,sans-serif;font-size:21px;margin:36px 0 8px}
+p,li{color:#2E4E53}
+ul{padding-left:22px}
+.date{color:#4E6B6F;font-size:14px;margin-bottom:28px}
+.box{background:#FBF8F3;border:1px solid #DDD5C7;border-radius:12px;padding:18px 20px;margin-top:28px}
+button{font:600 15px Inter,Arial,sans-serif;min-height:44px;padding:0 20px;border-radius:999px;border:2px solid #0E3B43;background:#0E3B43;color:#F2EDE4;cursor:pointer;margin-top:8px}
+button:focus-visible,a:focus-visible{outline:3px solid #B8431F;outline-offset:3px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="back" href="index.html">← ONN Agency ana sayfa</a>
+  <h1>Gizlilik ve Çerez Politikası</h1>
+  <p class="date">Son güncelleme: 11 Kasım 2026</p>
+
+  <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında, onn.agency web sitesini ziyaret ettiğinizde hangi verilerin işlendiğini açıklamak için hazırlanmıştır.</p>
+
+  <h2>Veri sorumlusu</h2>
+  <p>ONN Agency, Samsun. İletişim: <a href="mailto:info@onn.agency">info@onn.agency</a> · 0551 166 96 03</p>
+
+  <h2>Hangi verileri işliyoruz?</h2>
+  <ul>
+    <li><strong>Çerez onayı verirseniz:</strong> Google Analytics aracılığıyla sayfa görüntüleme, siteye hangi kaynaktan geldiğiniz, cihaz ve tarayıcı türü, yaklaşık konum (şehir düzeyinde) ve sitede tıkladığınız iletişim bağlantıları gibi kullanım bilgileri.</li>
+    <li><strong>Bizimle iletişime geçerseniz:</strong> WhatsApp, telefon, e-posta veya Instagram üzerinden bize ilettiğiniz ad, telefon numarası ve mesaj içeriği.</li>
+  </ul>
+  <p>Sitede form bulunmaz; sitenin kendisi adınızı, telefonunuzu veya e-postanızı kaydetmez.</p>
+
+  <h2>Hangi amaçla?</h2>
+  <ul>
+    <li>Sitenin nasıl kullanıldığını anlamak ve geliştirmek (yalnızca açık rızanızla).</li>
+    <li>Teklif ve bilgi taleplerinize cevap vermek, size hizmet sunmak.</li>
+  </ul>
+
+  <h2>Çerezler</h2>
+  <p>Sitenin çalışması için zorunlu bir çerez kullanılmaz. Yalnızca onay verdiğinizde Google Analytics çerezleri (<code>_ga</code>, <code>_ga_*</code>) yerleştirilir; bu çerezler en fazla 2 yıl saklanır. Onay vermezseniz hiçbir ölçüm yapılmaz. Tercihiniz, yalnızca tarayıcınızda saklanan bir kayıtla hatırlanır.</p>
+
+  <h2>Verilerin aktarılması</h2>
+  <p>Onay vermeniz halinde kullanım verileri, Google Analytics hizmetini sağlayan Google’a aktarılır ve yurt dışındaki sunucularda işlenebilir. Bu aktarım, KVKK’nın 9. maddesi kapsamında açık rızanıza dayanır. İletişim kanalları (WhatsApp, Instagram) kendi gizlilik politikalarına tabidir.</p>
+
+  <h2>Haklarınız</h2>
+  <p>KVKK’nın 11. maddesi uyarınca verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz. Taleplerinizi <a href="mailto:info@onn.agency">info@onn.agency</a> adresine iletebilirsiniz; en geç 30 gün içinde cevap veririz.</p>
+
+  <div class="box">
+    <strong>Çerez tercihinizi değiştirin</strong>
+    <p id="ckState" style="margin:6px 0 0"></p>
+    <button type="button" id="ckToggle">Tercihi değiştir</button>
+  </div>
+</main>
+<script>
+(function(){
+  var KEY='onn-cerez', st=document.getElementById('ckState'), bt=document.getElementById('ckToggle');
+  function get(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function set(v){try{localStorage.setItem(KEY,v);}catch(e){}}
+  function render(){var p=get(); st.textContent=p==='evet'?'Şu an: Google Analytics çerezlerine izin verdiniz.':(p==='hayir'?'Şu an: Google Analytics çerezlerini reddettiniz.':'Henüz bir tercih yapmadınız.'); bt.textContent=p==='evet'?'Onayı geri çek':'Çerezlere izin ver';}
+  bt.addEventListener('click',function(){
+    if(get()==='evet'){set('hayir');document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(/^_ga/.test(n)){var d=location.hostname.replace(/^www\./,'');document.cookie=n+'=; Max-Age=0; path=/';document.cookie=n+'=; Max-Age=0; path=/; domain=.'+d;}});}
+    else set('evet');
+    render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>

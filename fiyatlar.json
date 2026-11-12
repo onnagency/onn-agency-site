@@ -1,0 +1,174 @@
+{
+  "paketler": [
+    {
+      "ad": "Vitrin",
+      "kimin_icin": "İşletmesini internette sade ve düzgün tanıtmak isteyenler için.",
+      "fiyat": "5.999 TL",
+      "fiyat_birimi": "kurulum",
+      "fiyat_alt_yazi": "Tek seferlik · İsteğe bağlı bakım: **yıllık 1.499 TL**",
+      "ozellikler": [
+        "Mobil uyumlu tanıtım sitesi",
+        "Ana sayfa, hakkımızda, hizmetler, iletişim",
+        "9 fotoğrafa kadar basit galeri",
+        "Aylık ücret yok, tek seferlik ödeme"
+      ],
+      "one_cikan": false,
+      "rozet": ""
+    },
+    {
+      "ad": "Sahne",
+      "kimin_icin": "Daha fazla içerik ve özellik isteyen, menüsünü ya da ürünlerini detaylı göstermek isteyen işletmeler için.",
+      "fiyat": "7.499 TL",
+      "fiyat_birimi": "kurulum",
+      "fiyat_alt_yazi": "Tek seferlik · İlk yıl bakım dahil, sonra **yıllık 1.499 TL**",
+      "ozellikler": [
+        "Kapsamlı kurumsal web sitesi",
+        "12 fotoğrafa kadar galeri, menü ya da ürün sayfaları",
+        "İletişim ya da rezervasyon formu, Google Haritalar",
+        "Temel SEO: başlıklar, site haritası, Google kaydı"
+      ],
+      "one_cikan": false,
+      "rozet": ""
+    },
+    {
+      "ad": "Prestij",
+      "kimin_icin": "Sitesiyle birlikte reklamla yeni müşteri kazanmak isteyen işletmeler için.",
+      "fiyat": "3.999 TL",
+      "fiyat_birimi": "/ ay",
+      "fiyat_alt_yazi": "Kurulum: **8.999 TL** · En az 3 ay",
+      "ozellikler": [
+        "Sahne’deki kapsamlı site, bakım dahil",
+        "Kapsamlı SEO: yerel aramalar ve Search Console takibi",
+        "Meta ve Google reklam yönetimi",
+        "Kitle listeleri ve yeniden hedefleme",
+        "Haftalık sonuç raporu"
+      ],
+      "one_cikan": true,
+      "rozet": "En kapsamlı"
+    }
+  ],
+  "ortak_not": "Tüm paketlerde: mobil uyumlu tasarım, alan adına bağlama ve yayına alma, Google İşletme Profili kurulumu ve talebinize göre 3–8 gün içinde teslim.",
+  "karsilastirma": [
+    {
+      "ozellik": "Mobil uyumlu web sitesi",
+      "vitrin": "Var",
+      "sahne": "Var",
+      "prestij": "Var"
+    },
+    {
+      "ozellik": "Site türü",
+      "vitrin": "Tanıtım",
+      "sahne": "Kapsamlı",
+      "prestij": "Kapsamlı"
+    },
+    {
+      "ozellik": "Fotoğraf galerisi",
+      "vitrin": "9 fotoğrafa kadar",
+      "sahne": "12 fotoğrafa kadar",
+      "prestij": "12 fotoğrafa kadar"
+    },
+    {
+      "ozellik": "Menü ya da ürün sayfaları",
+      "vitrin": "Yok",
+      "sahne": "Var",
+      "prestij": "Var"
+    },
+    {
+      "ozellik": "İletişim / rezervasyon formu, Google Haritalar",
+      "vitrin": "Yok",
+      "sahne": "Var",
+      "prestij": "Var"
+    },
+    {
+      "ozellik": "Alan adına bağlama ve yayına alma",
+      "vitrin": "Var",
+      "sahne": "Var",
+      "prestij": "Var"
+    },
+    {
+      "ozellik": "Google İşletme Profili kurulumu",
+      "vitrin": "Var",
+      "sahne": "Var",
+      "prestij": "Var"
+    },
+    {
+      "ozellik": "SEO (Google arama uyumu)",
+      "vitrin": "Yok",
+      "sahne": "Temel",
+      "prestij": "Kapsamlı"
+    },
+    {
+      "ozellik": "Bakım ve küçük güncellemeler",
+      "vitrin": "İsteğe bağlı · yıllık 1.499 TL",
+      "sahne": "İlk yıl dahil",
+      "prestij": "Dahil"
+    },
+    {
+      "ozellik": "Meta (Instagram, Facebook) reklam yönetimi",
+      "vitrin": "Yok",
+      "sahne": "Yok",
+      "prestij": "Var"
+    },
+    {
+      "ozellik": "Google reklam yönetimi",
+      "vitrin": "Yok",
+      "sahne": "Yok",
+      "prestij": "Var"
+    },
+    {
+      "ozellik": "Kitle listeleri ve yeniden hedefleme",
+      "vitrin": "Yok",
+      "sahne": "Yok",
+      "prestij": "Var"
+    },
+    {
+      "ozellik": "Reklam hesabı ve dönüşüm takibi kurulumu",
+      "vitrin": "Yok",
+      "sahne": "Yok",
+      "prestij": "Var"
+    },
+    {
+      "ozellik": "Sonuç raporu",
+      "vitrin": "Yok",
+      "sahne": "Yok",
+      "prestij": "Haftalık"
+    }
+  ],
+  "ek_hizmetler": [
+    {
+      "ad": "Google ve Meta reklam yönetimi",
+      "fiyat": "4.999 TL / ay",
+      "fiyat_notu": "Prestij paketinde 3.999 TL",
+      "aciklama": "Siteniz varsa ya da sadece reklam istiyorsanız. Instagram, Facebook ve Google reklamları, yeniden hedefleme ve haftalık rapor. En az 3 ay; reklam bütçesi ayrıdır.",
+      "buton_yazisi": "Teklif alın"
+    },
+    {
+      "ad": "E-ticaret",
+      "fiyat": "Fiyatı birlikte belirleyelim",
+      "fiyat_notu": "",
+      "aciklama": "Her online mağaza farklı: ürün sayısı, ödeme altyapısı, kargo ve entegrasyonlar fiyatı değiştirir. İhtiyaçlarınızı anlatın, size özel fiyatı birlikte netleştirelim.",
+      "buton_yazisi": "İhtiyacınızı anlatın"
+    },
+    {
+      "ad": "Ürün fotoğrafı",
+      "fiyat": "1.999 TL",
+      "fiyat_notu": "",
+      "aciklama": "Samsun’da yerinde çekim. 10 ürüne kadar 1.999 TL, sonraki her ürün için 149 TL eklenir.",
+      "buton_yazisi": "Teklif alın"
+    },
+    {
+      "ad": "Mobil uygulama",
+      "fiyat": "34.999 TL’den",
+      "fiyat_notu": "",
+      "aciklama": "Her pakete ek alınabilir. Sadakat kartı, sipariş ve bildirim özellikleri işletmenize göre planlanır.",
+      "buton_yazisi": "Teklif alın"
+    }
+  ],
+  "notlar": [
+    "Fiyatlara KDV dahil değildir.",
+    "Sayfa sayısı ve içerik, ilk görüşmede ihtiyacınıza göre birlikte belirlenir.",
+    "Reklam bütçesi, alan adı ücreti ve uygulama mağazası hesap ücretleri fiyatlara dahil değildir.",
+    "Temel SEO: başlıklar, site haritası ve Google kaydı. Kapsamlı SEO: buna ek olarak yerel aramalara göre düzen ve aylık takip. SEO, Google’da sıralama garantisi vermez.",
+    "Aylık hizmetlerde en az 3 aylık çalışma süresi vardır."
+  ]
+}
