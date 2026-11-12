@@ -1,13 +1,13 @@
 # ONN Agency içerik paneli (Pages CMS): app.pagescms.org
 media:
-  input: src/assets/img/yuklemeler
+  input: yuklemeler
   output: /assets/img/yuklemeler
 
 content:
   - name: fiyatlar
     label: Fiyatlar
     type: file
-    path: content/fiyatlar.json
+    path: fiyatlar.json
     format: json
     fields:
       - name: paketler
@@ -58,7 +58,7 @@ content:
   - name: sss
     label: Sıkça sorulanlar
     type: file
-    path: content/sss.json
+    path: sss.json
     format: json
     fields:
       - name: sorular
@@ -75,7 +75,7 @@ content:
   - name: iletisim
     label: İletişim
     type: file
-    path: content/iletisim.json
+    path: iletisim.json
     format: json
     fields:
       - { name: whatsapp, label: WhatsApp numarası, type: string, description: "Başında + olmadan, ülke koduyla: 905511669603. Fiyat butonlarındaki WhatsApp bağlantıları bunu kullanır." }

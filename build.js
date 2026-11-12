@@ -1,21 +1,27 @@
-// ONN Agency site derleyicisi.
-// content/*.json içindeki metinleri src/index.html şablonuna yerleştirir, sonucu dist/ klasörüne yazar.
-// GitHub Actions her yayında bunu çalıştırır: "node build.js". Ek paket gerektirmez.
+// ONN Agency site derleyicisi (düz klasör yapısı).
+// Depodaki dosyaları toplar, fiyatlar.json / sss.json / iletisim.json içeriğini
+// ana sayfaya yerleştirir ve yayınlanacak siteyi dist/ klasörüne yazar.
+// GitHub Actions her değişiklikte bunu çalıştırır: "node build.js". Ek paket gerektirmez.
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = __dirname;
-const SRC = path.join(ROOT, 'src');
 const DIST = path.join(ROOT, 'dist');
+const exists = (p) => fs.existsSync(path.join(ROOT, p));
 const read = (p) => JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8'));
+const put = (from, to) => {
+  const dst = path.join(DIST, to);
+  fs.mkdirSync(path.dirname(dst), { recursive: true });
+  fs.copyFileSync(path.join(ROOT, from), dst);
+};
 
 const esc = (s) => String(s ?? '')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 // **kalın** yazımı <strong> olur, gerisi düz metin.
 const rich = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
-const iletisim = read('content/iletisim.json');
-const wa = (text) => `https://wa.me/${iletisim.whatsapp}?text=${encodeURIComponent(text)}`;
+const iletisim = read('iletisim.json');
+const wa = (text) => `https://wa.me/${String(iletisim.whatsapp || '').replace(/\D/g, '')}?text=${encodeURIComponent(text)}`;
 
 const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="#FF7A59" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 
@@ -70,22 +76,34 @@ function renderFaq(s) {
     `<details class="qa reveal"><summary>${esc(q.soru)}<span class="pm" aria-hidden="true"></span></summary><p>${esc(q.cevap)}</p></details>`).join('');
 }
 
-function copyDir(from, to) {
-  fs.mkdirSync(to, { recursive: true });
-  for (const e of fs.readdirSync(from, { withFileTypes: true })) {
-    const a = path.join(from, e.name), b = path.join(to, e.name);
-    e.isDirectory() ? copyDir(a, b) : fs.copyFileSync(a, b);
-  }
+fs.rmSync(DIST, { recursive: true, force: true });
+fs.mkdirSync(DIST, { recursive: true });
+
+// Ana sayfa şablonu: içinde <!--CMS:fiyatlar--> işareti olan html dosyası.
+// Diğer küçük index dosyası panele yönlendirme sayfasıdır (/admin).
+let template = null;
+for (const name of fs.readdirSync(ROOT)) {
+  if (!/\.html$/i.test(name) || name === 'gizlilik.html') continue;
+  const html = fs.readFileSync(path.join(ROOT, name), 'utf8');
+  if (html.includes('<!--CMS:fiyatlar-->')) template = html;
+  else if (/pagescms/i.test(html)) put(name, 'admin/index.html');
+}
+if (!template) throw new Error('Ana sayfa şablonu bulunamadı (<!--CMS:fiyatlar--> işareti olan html).');
+
+for (const name of fs.readdirSync(ROOT)) {
+  const full = path.join(ROOT, name);
+  if (!fs.statSync(full).isFile()) continue;
+  if (/\.webp$|\.jpe?g$/i.test(name)) put(name, 'assets/img/' + name);
+  else if (/\.(png|svg)$/i.test(name)) put(name, 'assets/' + name);
+  else if (['gizlilik.html', 'robots.txt', 'sitemap.xml', 'site.webmanifest', 'CNAME'].includes(name)) put(name, name);
+}
+// Panelden yüklenen görseller
+if (exists('yuklemeler')) {
+  for (const name of fs.readdirSync(path.join(ROOT, 'yuklemeler'))) put('yuklemeler/' + name, 'assets/img/yuklemeler/' + name);
 }
 
-fs.rmSync(DIST, { recursive: true, force: true });
-copyDir(SRC, DIST);
-copyDir(path.join(ROOT, 'admin'), path.join(DIST, 'admin'));
-
-let html = fs.readFileSync(path.join(SRC, 'index.html'), 'utf8');
-const need = ['<!--CMS:fiyatlar-->', '<!--CMS:sss-->'];
-for (const m of need) if (!html.includes(m)) throw new Error('Şablonda işaret yok: ' + m);
-html = html.replace('<!--CMS:fiyatlar-->', renderPricing(read('content/fiyatlar.json')));
-html = html.replace('<!--CMS:sss-->', renderFaq(read('content/sss.json')));
+let html = template
+  .replace('<!--CMS:fiyatlar-->', renderPricing(read('fiyatlar.json')))
+  .replace('<!--CMS:sss-->', renderFaq(read('sss.json')));
 fs.writeFileSync(path.join(DIST, 'index.html'), html);
 console.log('Site derlendi: dist/');
