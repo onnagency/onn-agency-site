@@ -83,7 +83,7 @@ fs.mkdirSync(DIST, { recursive: true });
 // Diğer küçük index dosyası panele yönlendirme sayfasıdır (/admin).
 let template = null;
 for (const name of fs.readdirSync(ROOT)) {
-  if (!/\.html$/i.test(name) || name === 'gizlilik.html') continue;
+  if (!/\.html$/i.test(name) || name === 'gizlilik.html' || name === 'sahne.html') continue;
   const html = fs.readFileSync(path.join(ROOT, name), 'utf8');
   if (html.includes('<!--CMS:fiyatlar-->')) template = html;
   else if (/pagescms/i.test(html)) put(name, 'admin/index.html');
@@ -107,4 +107,15 @@ let html = template
   .replace('<!--CMS:fiyatlar-->', renderPricing(read('fiyatlar.json')))
   .replace('<!--CMS:sss-->', renderFaq(read('sss.json')));
 fs.writeFileSync(path.join(DIST, 'index.html'), html);
+
+// Sahne sayfası (onn.agency/sahne/): fiyat ve SSS verisi panelden gelir.
+if (exists('sahne.html')) {
+  const j = (p) => JSON.stringify(read(p)).replace(/<\//g, '<\\/');
+  const sahne = fs.readFileSync(path.join(ROOT, 'sahne.html'), 'utf8')
+    .replace('__FIYAT__', () => j('fiyatlar.json'))
+    .replace('__SSS__', () => j('sss.json'))
+    .replace('<!--CMS:fiyatlar-->', () => renderPricing(read('fiyatlar.json')));
+  fs.mkdirSync(path.join(DIST, 'sahne'), { recursive: true });
+  fs.writeFileSync(path.join(DIST, 'sahne', 'index.html'), sahne);
+}
 console.log('Site derlendi: dist/');

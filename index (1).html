@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ONN Agency — Samsun için dijital ajans</title>
-<meta name="description" content="ONN Agency; Samsun'daki işletmeler için web sitesi, e-ticaret, Google ve Meta reklamları, ürün fotoğrafı ve mobil uygulama hazırlar.">
+<meta name="description" content="ONN Agency; Samsun'daki işletmeler için web sitesi, e-ticaret, Google ve Meta reklamları, ürün fotoğrafı, mobil uygulama ve seslendirme hizmeti sunar.">
 <meta name="theme-color" content="#0E3B43">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon.png" type="image/png" sizes="512x512">
@@ -24,7 +24,7 @@
 <link rel="canonical" href="https://onn.agency/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
 <style>
 :root{
   --surface:#F2EDE4; --raised:#FBF8F3; --line:#DDD5C7;
@@ -387,9 +387,54 @@ footer{padding:48px 0 40px;color:var(--muted);font-size:14px}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+@media (min-width:961px){.svc-cta{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.3fr auto;align-items:center;gap:28px}.svc-cta .sfoot{margin-top:0;padding-top:0;gap:16px}}
+.extras{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1100px){.extras{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.extras{grid-template-columns:1fr}}
+
+/* sahne girişi (kısa) */
+.sh-stage{position:relative;height:260vh;background:#04161A;color:var(--sand)}
+.sh-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.sh-cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sh-chap{position:absolute;left:max(24px,calc((100vw - 1180px)/2 + 24px));top:50%;transform:translateY(-50%);max-width:520px;opacity:0;pointer-events:none;padding-top:40px}
+.sh-chap.on{pointer-events:auto}
+.sh-chap h1{font-size:clamp(52px,7.4vw,112px);line-height:.92;font-weight:700;letter-spacing:-.045em;padding-bottom:.1em;background:linear-gradient(180deg,#F2EDE4 55%,#CFE3E0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sh-chap h1 .dot{color:var(--coral);-webkit-text-fill-color:var(--coral)}
+.sh-chap h2{font-size:clamp(38px,4.6vw,66px);line-height:1;letter-spacing:-.035em;color:var(--sand)}
+.sh-chap h2 em{font-style:normal;color:var(--coral)}
+.sh-lead{color:#A9C4C1;margin:22px 0 30px;max-width:440px;font-size:18px}
+.sh-num{font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--coral);margin:0 0 18px}
+.sh-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.sh-tags{justify-content:flex-start;margin-top:40px}
+.sh-clock{position:absolute;right:max(24px,calc((100vw - 1180px)/2 + 24px));bottom:104px;text-align:right;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(207,227,224,.6)}
+.sh-clock b{display:block;font-family:var(--display);font-size:34px;letter-spacing:-.02em;color:var(--sand);margin-top:4px}
+.sh-skip{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid rgba(242,237,228,.22);background:rgba(4,22,26,.5);backdrop-filter:blur(8px);color:var(--sand);font-size:13px;font-weight:600;text-decoration:none;transition:opacity .4s,border-color .25s}
+.sh-skip:hover{border-color:var(--coral)}
+.sh-hint{position:absolute;left:max(24px,calc((100vw - 1180px)/2 + 24px));bottom:34px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(207,227,224,.6);display:flex;align-items:center;gap:12px;transition:opacity .4s}
+.sh-hint i{width:38px;height:1px;background:linear-gradient(90deg,var(--foam),transparent)}
+.sh-bar{position:absolute;left:0;bottom:0;height:3px;background:var(--coral);width:0}
+@media (max-width:760px){
+  .sh-chap{left:20px;right:20px;top:auto;bottom:86px;transform:none;max-width:none;padding-top:0}
+  .sh-chap h1{font-size:50px}
+  .sh-chap h2{font-size:34px}
+  .sh-lead{font-size:15.5px;margin:14px 0 20px}
+  .sh-num{margin-bottom:10px}
+  .sh-tags{display:none}
+  .sh-clock{top:84px;bottom:auto;right:20px}
+  .sh-clock b{font-size:24px}
+  .sh-hint{display:none}
+  .sh-skip{bottom:22px}
+}
+@media (prefers-reduced-motion:reduce){.sh-stage{height:100vh;height:100svh}}
+
+.sahne-cta{margin-top:56px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:28px 32px;border-radius:20px;background:var(--deep);color:var(--sand);text-decoration:none}
+.sahne-cta b{font-family:var(--display);font-size:24px;letter-spacing:-.02em;display:block}
+.sahne-cta span{color:#A9C4C1;font-size:15px}
+.sahne-cta i{font-style:normal;color:var(--coral);font-weight:600;white-space:nowrap}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"ONN Agency","url":"https://onn.agency/","logo":"https://onn.agency/assets/favicon.png","image":"https://onn.agency/assets/og.png","description":"Samsun'daki işletmeler için web sitesi, e-ticaret, Google ve Meta reklam yönetimi, ürün fotoğrafı ve mobil uygulama.","telephone":"+905511669603","email":"info@onn.agency","address":{"@type":"PostalAddress","addressRegion":"Samsun","addressCountry":"TR"},"areaServed":{"@type":"AdministrativeArea","name":"Samsun"},"sameAs":["https://www.instagram.com/onn.agency/"],"priceRange":"₺₺","knowsLanguage":"tr","foundingDate":"2026"}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"ONN Agency","url":"https://onn.agency/","logo":"https://onn.agency/assets/favicon.png","image":"https://onn.agency/assets/og.png","description":"Samsun'daki işletmeler için web sitesi, e-ticaret, Google ve Meta reklam yönetimi, ürün fotoğrafı, mobil uygulama ve seslendirme.","telephone":"+905511669603","email":"info@onn.agency","address":{"@type":"PostalAddress","addressRegion":"Samsun","addressCountry":"TR"},"areaServed":{"@type":"AdministrativeArea","name":"Samsun"},"sameAs":["https://www.instagram.com/onn.agency/"],"priceRange":"₺₺","knowsLanguage":"tr","foundingDate":"2026"}
 </script>
 </head>
 <body>
@@ -434,22 +479,41 @@ footer{padding:48px 0 40px;color:var(--muted);font-size:14px}
 </div>
 
 <main>
-<section class="hero" id="giris" aria-label="Giriş">
-  <div class="hx-bg" aria-hidden="true">
-    <div class="hx-grid"></div>
-    <svg class="hx-arch" viewBox="0 0 1200 760" fill="none"><path d="M100 760 V560 A500 500 0 0 1 1100 560 V760" stroke="currentColor" stroke-width="2"/><path d="M220 760 V580 A380 380 0 0 1 980 580 V760" stroke="currentColor" stroke-width="1.5" opacity=".6"/><path d="M340 760 V600 A260 260 0 0 1 860 600 V760" stroke="currentColor" stroke-width="1" opacity=".4"/></svg>
-    <div class="hx-sun"></div>
-    <div class="hx-line"></div>
-  </div>
-  <div class="wrap hx-in">
-    <p class="hx-pill"><span class="dot" aria-hidden="true"></span>Samsun · Dijital ajans</p>
-    <h1>Markanın<br>yeni günü<span class="dot">.</span></h1>
-    <p class="lead">Yerel işletmeler için web siteleri, e-ticaret ve reklam. Modern, hızlı ve esnaf bütçesine uygun.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-coral" href="#iletisim">Projenizi konuşalım <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-line" href="#isler">İşlerimizi görün</a>
+<section class="sh-stage" id="giris" aria-label="Giriş">
+  <div class="sh-pin">
+    <canvas class="sh-cv" id="shCv" aria-hidden="true"></canvas>
+
+    <div class="sh-chap" data-r="0,.17">
+      <p class="hx-pill"><span class="dot" aria-hidden="true"></span>Samsun · Dijital ajans</p>
+      <h1>Markanın<br>yeni günü<span class="dot">.</span></h1>
+      <p class="sh-lead">Yerel işletmeler için web siteleri, e-ticaret ve reklam. Modern, hızlı ve esnaf bütçesine uygun.</p>
+      <div class="sh-ctas">
+        <a class="btn btn-coral" href="#iletisim">Projenizi konuşalım <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="#fiyatlar">Fiyatları görün</a>
+      </div>
+      <ul class="hx-tags sh-tags" aria-label="Hizmetler"><li>Web siteleri</li><li>E-ticaret</li><li>Google ve Meta reklamları</li><li>Ürün fotoğrafı</li><li>Mobil uygulama</li><li>Seslendirme</li></ul>
     </div>
-    <ul class="hx-tags" aria-label="Hizmetler"><li>Web siteleri</li><li>E-ticaret</li><li>Google ve Meta reklamları</li><li>Ürün fotoğrafı</li><li>Mobil uygulama</li></ul>
+
+    <div class="sh-chap" data-r=".22,.55" aria-hidden="true">
+      <p class="sh-num">Tasarım · Geliştirme</p>
+      <h2>Çizgiler, <em>koda</em> dönüşür.</h2>
+      <p class="sh-lead">Markanıza özel tasarım; hızlı ve mobil uyumlu. Talepleriniz doğrultusunda 3 ila 8 günde yayında.</p>
+    </div>
+
+    <div class="sh-chap" data-r=".64,1.01">
+      <p class="sh-num">Teslim · Yeni gün</p>
+      <h2>Her iş, bir markanın<br>yeni <em>günü.</em></h2>
+      <p class="sh-lead">Sizin alan adınızda, tüm hakları sizde. Sıradaki sabah sizin olsun.</p>
+      <div class="sh-ctas">
+        <a class="btn btn-coral" href="#iletisim">Projenizi konuşalım</a>
+        <a class="btn btn-line" href="sahne/">Tam hikâyeyi izleyin</a>
+      </div>
+    </div>
+
+    <div class="sh-clock" aria-hidden="true"><span>Karadeniz · Samsun</span><b id="shClock">04:00</b></div>
+    <a class="sh-skip" id="shSkip" href="#hizmetler">Animasyonu geç <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    <div class="sh-hint" id="shHint" aria-hidden="true">Kaydırın<i></i></div>
+    <div class="sh-bar" id="shBar"></div>
   </div>
 </section>
 <section class="services" id="hizmetler">
@@ -507,6 +571,13 @@ footer{padding:48px 0 40px;color:var(--muted);font-size:14px}
         <p>İşletmenize özel iOS ve Android uygulaması; sipariş, sadakat kartı, bildirim.</p>
         <span class="sfoot"><span class="tagline">34.999 TL’den</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
       </a>
+      <a class="svc reveal" href="#fiyatlar">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0E3B43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></svg></div>
+        <span class="num">07</span>
+        <h3>Seslendirme</h3>
+        <p>Reklam, tanıtım videosu ve sosyal medya içerikleriniz için profesyonel seslendirme.</p>
+        <span class="sfoot"><span class="tagline">Fiyatı birlikte belirleyelim</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+      </a>
       <a class="svc svc-cta reveal" href="https://wa.me/905511669603?text=Merhaba%2C%20i%C5%9Fletmem%20i%C3%A7in%20hangi%20hizmetin%20uygun%20oldu%C4%9Funu%20konu%C5%9Fmak%20istiyorum.">
         <h3>Hangisi size uygun, emin değil misiniz?</h3>
         <p>İşletmenizi anlatın, size en uygun ve en ekonomik yolu birlikte bulalım. İlk görüşme ücretsiz.</p>
@@ -560,6 +631,7 @@ footer{padding:48px 0 40px;color:var(--muted);font-size:14px}
         </div>
       </article>
     </div>
+    <a class="sahne-cta reveal" href="sahne/"><span><b>Sahne: kaydırdıkça anlatan siteler</b><span>Bir sitenin doğuşunu, baştan sona hikâye olarak izleyin.</span></span><i>Hikâyeyi izleyin →</i></a>
   </div>
 </section>
 
@@ -728,6 +800,172 @@ footer{padding:48px 0 40px;color:var(--muted);font-size:14px}
     if(m){gtag('event','generate_lead',{method:m});}
     else if(h.indexOf('instagram.com')>-1){gtag('event','instagram_tiklama');}
   });
+})();
+</script>
+<script>
+(function(){
+const stage=document.getElementById('giris'),cv=document.getElementById('shCv');if(!stage||!cv)return;
+const ctx=cv.getContext('2d');
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+const seg=(p,a,b)=>clamp((p-a)/(b-a));
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let W=0,H=0,DPR=1,Sc=1,cx=0,cy=0,mobile=false;
+const rnd=(()=>{let s=7;return()=>(s=(s*16807)%2147483647)/2147483647})();
+const stars=Array.from({length:160},()=>({x:rnd(),y:rnd(),r:rnd()*1.3+.3,t:rnd()*6.28}));
+const shimmer=Array.from({length:90},()=>({x:rnd(),y:rnd(),w:rnd()*40+10,s:rnd()*.4+.1}));
+const GL='<>{}/=;()[]#.:01onnconstletdivcssfn';
+/* layout blocks (local logo units, logo is 0..120) */
+const blocks=[
+  {x:-30,y:20,w:38,h:4,k:'n'},{x:110,y:20,w:42,h:4,k:'n'},
+  {x:-30,y:32,w:92,h:9,k:'t'},{x:-30,y:45,w:72,h:9,k:'t'},{x:-30,y:59,w:36,h:9,k:'b'},
+  {x:78,y:30,w:74,h:44,k:'i'},
+  {x:-30,y:84,w:56,h:32,k:'c'},{x:33,y:84,w:56,h:32,k:'c'},{x:96,y:84,w:56,h:32,k:'c'}
+];
+const parts=Array.from({length:520},(_,i)=>{const b=blocks[2+Math.floor(rnd()*7)];return{
+  sx:rnd(),sy:-rnd()*.6-.05,tx:b.x+rnd()*b.w,ty:b.y+rnd()*b.h,d:rnd(),g:GL[Math.floor(rnd()*GL.length)],a:rnd()*6.28,coral:rnd()<.12}});
+const glyphRows=blocks.map(b=>{const rows=[];const n=Math.max(1,Math.floor(b.h/4.2));for(let r=0;r<n;r++){let s='';for(let c=0;c<Math.floor(b.w/2.6);c++)s+=GL[Math.floor(rnd()*GL.length)];rows.push(s)}return rows});
+
+function resize(){
+  DPR=Math.min(2,devicePixelRatio||1);W=innerWidth;H=innerHeight;
+  cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);
+  mobile=W<760;
+  if(mobile){Sc=Math.min(W*.0042,H*.0021);cx=W/2;cy=H*.34}
+  else{Sc=Math.min(W*.0016,H*.0028);cx=W*.64;cy=H*.5}
+}
+const X=x=>cx+(x-60)*Sc, Y=y=>cy+(y-62)*Sc;
+function mix(c1,c2,t){const a=parseInt(c1.slice(1),16),b=parseInt(c2.slice(1),16);const r=Math.round(lerp(a>>16,b>>16,t)),g=Math.round(lerp(a>>8&255,b>>8&255,t)),bl=Math.round(lerp(a&255,b&255,t));return`rgb(${r},${g},${bl})`}
+
+function draw(p,time){
+  const s=ease(seg(p,.70,.88)), f=seg(p,.86,1);
+  const hy=Y(84);
+  /* sky */
+  let g=ctx.createLinearGradient(0,0,0,hy);
+  g.addColorStop(0,mix('#020D10','#0B2E35',s));
+  g.addColorStop(.65,mix('#05191E','#2F5157',s));
+  g.addColorStop(1,mix('#0A2A31','#E98A68',s));
+  ctx.fillStyle=g;ctx.fillRect(0,0,W,hy+1);
+  /* stars */
+  const sa=1-s;
+  if(sa>0.01){for(const st of stars){const y=st.y*hy*.95;ctx.globalAlpha=sa*(.35+.4*Math.sin(time*.0012+st.t));ctx.fillStyle='#CFE3E0';ctx.beginPath();ctx.arc(st.x*W,y,st.r,0,7);ctx.fill()}ctx.globalAlpha=1}
+  /* sun glow in sky */
+  if(s>0){const sy=Y(84+24*(1-s));const rg=ctx.createRadialGradient(X(60),sy,0,X(60),sy,Math.max(W,H)*.7);rg.addColorStop(0,`rgba(255,150,110,${.55*s})`);rg.addColorStop(.25,`rgba(255,122,89,${.22*s})`);rg.addColorStop(1,'rgba(255,122,89,0)');ctx.fillStyle=rg;ctx.fillRect(0,0,W,hy)}
+  /* sea */
+  g=ctx.createLinearGradient(0,hy,0,H);
+  g.addColorStop(0,mix('#072329','#3E4A4C',s*.8));g.addColorStop(1,'#020C0E');
+  ctx.fillStyle=g;ctx.fillRect(0,hy,W,H-hy);
+  for(const sh of shimmer){const y=hy+Math.pow(sh.y,1.6)*(H-hy);const depth=(y-hy)/(H-hy+1);let x=((sh.x*W+time*.02*sh.s*(1+depth*3))%(W+80))-40;const near=Math.max(0,1-Math.abs(x-X(60))/(W*.18));ctx.strokeStyle=near*s>.05?`rgba(255,140,100,${(.15+.5*near)*s})`:`rgba(207,227,224,${.05+.08*depth})`;ctx.lineWidth=1+depth*1.5;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+sh.w*(1+depth*2),y);ctx.stroke()}
+  /* sun reflection column */
+  if(s>0){for(let i=0;i<22;i++){const y=hy+6+i*i*1.3*Sc*.35;if(y>H)break;const w=(24-i*.6)*Sc*(.6+.4*Math.sin(time*.003+i));ctx.fillStyle=`rgba(255,122,89,${s*.5*(1-i/22)})`;ctx.fillRect(X(60)-w/2,y,w,Math.max(1.5,Sc*.8))}}
+
+  /* phases */
+  const spark=1-seg(p,.15,.24);
+  const wd=ease(seg(p,.12,.30));       // frame draw
+  const bd=seg(p,.22,.38);             // blocks draw
+  const c=seg(p,.36,.56);              // code
+  const url=seg(p,.48,.56);
+  const m=ease(seg(p,.56,.72));        // morph
+  const inner=1-seg(p,.56,.64);
+
+  /* window backing */
+  const L=lerp(-40,22,m),R=lerp(160,98,m),T=lerp(0,16,m),B=lerp(124,84,m),r=lerp(6,38,m);
+  if(wd>0&&inner>0){ctx.fillStyle=`rgba(3,18,22,${.82*wd*inner})`;ctx.beginPath();ctx.roundRect(X(L),Y(T),(R-L)*Sc,(B-T)*Sc,r*Sc);ctx.fill()}
+
+  /* blocks + code */
+  if(bd>0&&inner>0){
+    ctx.save();ctx.globalAlpha=inner;
+    blocks.forEach((b,i)=>{const t=clamp(bd*1.6-i*.07);if(t<=0)return;
+      ctx.strokeStyle=b.k==='b'?'rgba(255,122,89,.9)':'rgba(207,227,224,.55)';ctx.lineWidth=1;
+      const per=2*(b.w+b.h)*Sc;ctx.setLineDash([per*t,per]);ctx.beginPath();ctx.roundRect(X(b.x),Y(b.y),b.w*Sc,b.h*Sc,Math.min(3,b.h/3)*Sc);ctx.stroke();ctx.setLineDash([]);
+      const ct=clamp(c*1.5-i*.06);
+      if(ct>0){ctx.fillStyle=b.k==='b'?`rgba(255,122,89,${.85*ct})`:b.k==='i'?`rgba(207,227,224,${.10*ct})`:`rgba(207,227,224,${.06*ct})`;ctx.beginPath();ctx.roundRect(X(b.x),Y(b.y),b.w*Sc,b.h*Sc,Math.min(3,b.h/3)*Sc);ctx.fill();
+        if(b.k!=='b'&&b.k!=='n'){ctx.save();ctx.beginPath();ctx.rect(X(b.x),Y(b.y),b.w*Sc*ct,b.h*Sc);ctx.clip();ctx.font=`500 ${Math.max(6,3*Sc)}px JetBrains Mono, monospace`;ctx.textBaseline='top';glyphRows[i].forEach((row,ri)=>{ctx.fillStyle=ri%3===1?'rgba(255,122,89,.75)':'rgba(207,227,224,.55)';ctx.fillText(row,X(b.x+1.5),Y(b.y+1+ri*4.2))});ctx.restore()}
+        if(b.k==='i'&&ct>.4){/* tiny sunrise inside image block */const a=(ct-.4)/.6;ctx.fillStyle=`rgba(255,122,89,${.8*a})`;ctx.beginPath();ctx.arc(X(b.x+b.w/2),Y(b.y+b.h*.7),9*Sc,Math.PI,0);ctx.fill();ctx.fillStyle=`rgba(207,227,224,${.6*a})`;ctx.fillRect(X(b.x+8),Y(b.y+b.h*.7),(b.w-16)*Sc,1.2*Sc)}
+      }
+    });
+    ctx.restore();
+  }
+  /* chrome bar + url */
+  if(wd>0&&inner>0){ctx.save();ctx.globalAlpha=inner*wd;ctx.strokeStyle='rgba(207,227,224,.35)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(X(L),Y(T+12));ctx.lineTo(X(R),Y(T+12));ctx.stroke();
+    ['#FF7A59','#CFE3E0','#CFE3E0'].forEach((col,i)=>{ctx.fillStyle=col;ctx.globalAlpha=inner*wd*(i?.4:.9);ctx.beginPath();ctx.arc(X(L+7+i*5),Y(T+6),1.3*Sc,0,7);ctx.fill()});
+    ctx.globalAlpha=inner*wd;ctx.strokeStyle='rgba(207,227,224,.25)';ctx.beginPath();ctx.roundRect(X(L+30),Y(T+2.5),110*Sc,7*Sc,3.5*Sc);ctx.stroke();
+    if(url>0){const txt='isletmeniz.com';const n=Math.ceil(txt.length*url);ctx.fillStyle='rgba(242,237,228,.9)';ctx.font=`500 ${Math.max(8,3.6*Sc)}px JetBrains Mono, monospace`;ctx.textBaseline='middle';ctx.fillText('🔒 '+txt.slice(0,n),X(L+34),Y(T+6.2))}
+    ctx.restore()}
+
+  /* falling / absorbing glyph particles */
+  if(c>0&&p<.74){
+    ctx.font=`500 ${Math.max(7,3.2*Sc)}px JetBrains Mono, monospace`;ctx.textBaseline='middle';ctx.textAlign='center';
+    for(const q of parts){
+      const t1=ease(clamp(c*1.7-q.d*.7));
+      let x,y,al;
+      if(m<=0){x=lerp(q.sx*W,X(q.tx),t1);y=lerp(q.sy*H,Y(q.ty),t1);al=t1<1?.9:.0}
+      else{const t2=ease(clamp(m*1.5-q.d*.5));const ang=q.a+t2*4;const rr=(1-t2)*Math.hypot(q.tx-60,q.ty-84)*Sc;x=X(60)+Math.cos(ang)*rr*(1-t2*.3)+(X(q.tx)-X(60))*(1-t2)*0;y=Y(84)+Math.sin(ang)*rr*.5*(1-t2);
+        x=lerp(X(q.tx),x,t2);y=lerp(Y(q.ty),y,t2);al=(m>0?1:0)*(1-t2)*(inner<1?1:0)}
+      if(al<=.01)continue;
+      ctx.globalAlpha=al;ctx.fillStyle=q.coral?'#FF7A59':'#CFE3E0';ctx.fillText(q.g,x,y);
+    }
+    ctx.globalAlpha=1;ctx.textAlign='left';
+  }
+  /* energy at horizon center during morph */
+  if(m>0&&s<1){const e=m*(1-s);const rg=ctx.createRadialGradient(X(60),hy,0,X(60),hy,40*Sc);rg.addColorStop(0,`rgba(255,160,120,${.7*e})`);rg.addColorStop(1,'rgba(255,122,89,0)');ctx.fillStyle=rg;ctx.fillRect(X(60)-40*Sc,hy-40*Sc,80*Sc,80*Sc)}
+
+  /* SUN (clipped above horizon) */
+  if(s>0){ctx.save();ctx.beginPath();ctx.rect(0,0,W,hy);ctx.clip();const sy=Y(84+24*(1-s));
+    if(f>0){ctx.save();ctx.translate(X(60),sy);ctx.rotate(time*.00005);for(let i=0;i<18;i++){ctx.rotate(Math.PI*2/18);ctx.fillStyle=`rgba(255,200,160,${.07*f})`;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(Math.max(W,H),-40*Sc);ctx.lineTo(Math.max(W,H),40*Sc);ctx.closePath();ctx.fill()}ctx.restore()}
+    ctx.fillStyle='#FF7A59';ctx.shadowColor='rgba(255,122,89,.8)';ctx.shadowBlur=40*s;ctx.beginPath();ctx.arc(X(60),sy,24*Sc,0,Math.PI*2);ctx.fill();ctx.restore()}
+
+  /* FRAME → ARCH */
+  if(wd>0){
+    const lw=lerp(1.2,10*Sc,m);
+    ctx.strokeStyle=m>0?mix('#9FC3BE','#F2EDE4',m):'#9FC3BE';ctx.lineWidth=lw;ctx.lineCap='butt';ctx.lineJoin='round';
+    const per=(2*(B-T)+(R-L))*Sc*1.1;ctx.setLineDash([per*wd,per*2]);
+    ctx.beginPath();ctx.moveTo(X(L),Y(B));ctx.lineTo(X(L),Y(T+r));ctx.arcTo(X(L),Y(T),X(L+r),Y(T),r*Sc);ctx.lineTo(X(R-r),Y(T));ctx.arcTo(X(R),Y(T),X(R),Y(T+r),r*Sc);ctx.lineTo(X(R),Y(B));ctx.stroke();
+    ctx.setLineDash([]);
+    /* bottom edge → horizon */
+    const hl=lerp(-40,12,m),hr=lerp(160,108,m);const hw=(hr-hl)*wd;
+    ctx.lineWidth=lerp(1.2,8*Sc,m);ctx.lineCap='round';ctx.beginPath();ctx.moveTo(X(60-hw/2),Y(B));ctx.lineTo(X(60+hw/2),Y(B));ctx.stroke();
+    /* logo waves */
+    const wv=seg(p,.80,.92);
+    if(wv>0){ctx.lineWidth=6*Sc;ctx.strokeStyle='#F2EDE4';ctx.beginPath();ctx.moveTo(X(60-20*wv),Y(98));ctx.lineTo(X(60+20*wv),Y(98));ctx.stroke();const w2=clamp(wv*1.5-.4);if(w2>0){ctx.beginPath();ctx.moveTo(X(60-10*w2),Y(110));ctx.lineTo(X(60+10*w2),Y(110));ctx.stroke()}}
+  }
+  /* spark (idea) */
+  if(spark>0){const pul=1+.25*Math.sin(time*.004);const sx=X(60),sy=Y(lerp(46,40,seg(p,0,.15)));const rad=(2+seg(p,.05,.15)*3)*Sc*pul;
+    const rg=ctx.createRadialGradient(sx,sy,0,sx,sy,rad*8);rg.addColorStop(0,`rgba(255,150,110,${.8*spark})`);rg.addColorStop(1,'rgba(255,122,89,0)');ctx.fillStyle=rg;ctx.beginPath();ctx.arc(sx,sy,rad*8,0,7);ctx.fill();
+    ctx.fillStyle=`rgba(255,230,210,${spark})`;ctx.beginPath();ctx.arc(sx,sy,rad*.6,0,7);ctx.fill();
+    /* spark sends out construction lines */
+    const sl=seg(p,.10,.2)*spark;if(sl>0){ctx.strokeStyle=`rgba(255,122,89,${.5*sl})`;ctx.lineWidth=1;[[-40,0],[160,0],[-40,124],[160,124]].forEach(([a,b])=>{ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(lerp(sx,X(a),sl),lerp(sy,Y(b),sl));ctx.stroke()})}}
+  /* wordmark at the very end */
+  if(f>0){ctx.globalAlpha=ease(seg(p,.9,1));ctx.fillStyle='#F2EDE4';ctx.textAlign='center';ctx.textBaseline='alphabetic';ctx.font=`700 ${14*Sc}px "Space Grotesk", Arial`;ctx.fillText('onn',X(60),Y(134));ctx.font=`500 ${4*Sc}px "Space Grotesk", Arial`;ctx.fillStyle='#CFE3E0';ctx.fillText('A G E N C Y',X(60),Y(142));ctx.globalAlpha=1;ctx.textAlign='left'}
+
+  /* vignette */
+  const vg=ctx.createRadialGradient(W/2,H/2,Math.min(W,H)*.3,W/2,H/2,Math.max(W,H)*.75);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,0,0,.45)');ctx.fillStyle=vg;ctx.fillRect(0,0,W,H);
+  if(!mobile){/* left text legibility */const lg=ctx.createLinearGradient(0,0,W*.5,0);lg.addColorStop(0,'rgba(2,12,14,.55)');lg.addColorStop(1,'rgba(2,12,14,0)');ctx.fillStyle=lg;ctx.fillRect(0,0,W*.5,H)}
+  else{const lg=ctx.createLinearGradient(0,H*.5,0,H);lg.addColorStop(0,'rgba(2,12,14,0)');lg.addColorStop(1,'rgba(2,12,14,.85)');ctx.fillStyle=lg;ctx.fillRect(0,H*.5,W,H*.5)}
+}
+
+
+/* kısa sahne: uzun hikâyenin zaman çizelgesine eşleme */
+const MAP=[[0,0],[.14,.11],[.56,.56],[.86,.92],[1,1]];
+function longP(p){for(let i=1;i<MAP.length;i++){if(p<=MAP[i][0]){const[a0,b0]=MAP[i-1],[a1,b1]=MAP[i];return lerp(b0,b1,(p-a0)/(a1-a0))}}return 1}
+const chaps=[...stage.querySelectorAll('.sh-chap')].map(el=>{const[a,b]=el.dataset.r.split(',').map(Number);return{el,a,b}});
+const clock=document.getElementById('shClock'),bar=document.getElementById('shBar'),hint=document.getElementById('shHint'),skip=document.getElementById('shSkip');
+function overlays(p){
+  for(const ch of chaps){const fi=ch.a===0?1:seg(p,ch.a-.03,ch.a+.04),fo=ch.b>1?1:1-seg(p,ch.b-.05,ch.b);const o=Math.min(fi,fo);
+    ch.el.style.opacity=o;ch.el.style.filter=o>.99?'none':`blur(${(1-o)*8}px)`;ch.el.style.translate=`0 ${(1-o)*-18}px`;ch.el.classList.toggle('on',o>.5);ch.el.setAttribute('aria-hidden',o>.5?'false':'true')}
+  const mins=240+Math.round(longP(p)*180);clock.textContent=String(Math.floor(mins/60)).padStart(2,'0')+':'+String(mins%60).padStart(2,'0');
+  bar.style.width=(p*100)+'%';hint.style.opacity=p<.03?1:0;skip.style.opacity=p>.9?0:1;skip.style.pointerEvents=p>.9?'none':'auto';
+}
+function progress(){const r=stage.getBoundingClientRect();const span=r.height-innerHeight;return span>0?clamp(-r.top/span):1}
+let target=0,cp=0,visible=true;
+new IntersectionObserver(es=>{visible=es[0].isIntersecting},{threshold:0}).observe(stage);
+skip.addEventListener('click',()=>{if(window.gtag)gtag('event','sahne_atla')});
+function loop(t){
+  if(visible){target=reduce?1:progress();cp+=reduce?(target-cp):(target-cp)*.09;if(Math.abs(target-cp)<.0005)cp=target;draw(longP(cp),t);overlays(cp)}
+  requestAnimationFrame(loop);
+}
+addEventListener('resize',resize);resize();requestAnimationFrame(loop);
+if(document.fonts)document.fonts.ready.then(()=>{});
 })();
 </script>
 </body>
