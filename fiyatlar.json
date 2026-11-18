@@ -1,19 +1,4 @@
 {
-  "baslayan fiyatlar": [
-    {
-      "ad": "baslayanfiyatlar",
-      "kimin_icin": "İşletmesini internette sade ve düzgün tanıtmak isteyenler için.",
-      "fiyat": "6.999 TL",
-      "fiyat_birimi": "kurulum",
-      "fiyat_alt_yazi": "Tek seferlik · İsteğe bağlı bakım: **yıllık 1.499 TL**",
-      "ozellikler": [
-        "Mobil uyumlu tanıtım sitesi",
-        "Ana sayfa, hakkımızda, hizmetler, iletişim",
-        "9 fotoğrafa kadar basit galeri",
-        "Aylık ücret yok, tek seferlik ödeme"
-      ],
-      "one_cikan": false
-    } ],
   "paketler": [
     {
       "ad": "Vitrin",
