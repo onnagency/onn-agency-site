@@ -3,7 +3,7 @@
     {
       "ad": "Vitrin",
       "kimin_icin": "İşletmesini internette sade ve düzgün tanıtmak isteyenler için.",
-      "fiyat": "5.999 TL",
+      "fiyat": "6.999 TL",
       "fiyat_birimi": "kurulum",
       "fiyat_alt_yazi": "Tek seferlik · İsteğe bağlı bakım: **yıllık 1.499 TL**",
       "ozellikler": [
@@ -12,13 +12,12 @@
         "9 fotoğrafa kadar basit galeri",
         "Aylık ücret yok, tek seferlik ödeme"
       ],
-      "one_cikan": false,
-      "rozet": ""
+      "one_cikan": false
     },
     {
       "ad": "Sahne",
       "kimin_icin": "Daha fazla içerik ve özellik isteyen, menüsünü ya da ürünlerini detaylı göstermek isteyen işletmeler için.",
-      "fiyat": "7.499 TL",
+      "fiyat": "8.499 TL",
       "fiyat_birimi": "kurulum",
       "fiyat_alt_yazi": "Tek seferlik · İlk yıl bakım dahil, sonra **yıllık 1.499 TL**",
       "ozellikler": [
@@ -27,15 +26,14 @@
         "İletişim ya da rezervasyon formu, Google Haritalar",
         "Temel SEO: başlıklar, site haritası, Google kaydı"
       ],
-      "one_cikan": false,
-      "rozet": ""
+      "one_cikan": false
     },
     {
       "ad": "Prestij",
       "kimin_icin": "Sitesiyle birlikte reklamla yeni müşteri kazanmak isteyen işletmeler için.",
       "fiyat": "3.999 TL",
       "fiyat_birimi": "/ ay",
-      "fiyat_alt_yazi": "Kurulum: **8.999 TL** · En az 3 ay",
+      "fiyat_alt_yazi": "Kurulum: **9.999 TL** · En az 3 ay",
       "ozellikler": [
         "Sahne’deki kapsamlı site, bakım dahil",
         "Kapsamlı SEO: yerel aramalar ve Search Console takibi",
@@ -145,28 +143,24 @@
     {
       "ad": "E-ticaret",
       "fiyat": "Fiyatı birlikte belirleyelim",
-      "fiyat_notu": "",
       "aciklama": "Her online mağaza farklı: ürün sayısı, ödeme altyapısı, kargo ve entegrasyonlar fiyatı değiştirir. İhtiyaçlarınızı anlatın, size özel fiyatı birlikte netleştirelim.",
       "buton_yazisi": "İhtiyacınızı anlatın"
     },
     {
       "ad": "Ürün fotoğrafı",
       "fiyat": "1.999 TL",
-      "fiyat_notu": "",
       "aciklama": "Samsun’da yerinde çekim. 10 ürüne kadar 1.999 TL, sonraki her ürün için 149 TL eklenir.",
       "buton_yazisi": "Teklif alın"
     },
     {
       "ad": "Mobil uygulama",
       "fiyat": "34.999 TL’den",
-      "fiyat_notu": "",
       "aciklama": "Her pakete ek alınabilir. Sadakat kartı, sipariş ve bildirim özellikleri işletmenize göre planlanır.",
       "buton_yazisi": "Teklif alın"
     },
     {
       "ad": "Seslendirme",
       "fiyat": "Fiyatı birlikte belirleyelim",
-      "fiyat_notu": "",
       "aciklama": "Reklam, tanıtım videosu ve sosyal medya içerikleriniz için profesyonel seslendirme. Metnin uzunluğu ve kullanılacağı yere göre fiyatı birlikte netleştirelim.",
       "buton_yazisi": "İhtiyacınızı anlatın"
     }
