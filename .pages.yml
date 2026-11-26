@@ -38,7 +38,7 @@ content:
         fields:
           - { name: ozellik, label: Özellik, type: string }
           - { name: vitrin, label: Vitrin, type: string }
-          - { name: sahne, label: Sahne, type: string }
+          - { name: sahne, label: Kadraj, type: string }
           - { name: prestij, label: Prestij, type: string }
       - name: ek_hizmetler
         label: Ek hizmetler
