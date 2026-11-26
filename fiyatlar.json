@@ -3,27 +3,28 @@
     {
       "ad": "Vitrin",
       "kimin_icin": "İşletmesini internette sade ve düzgün tanıtmak isteyenler için.",
-      "fiyat": "6.999 TL",
+      "fiyat": "5.999 TL",
       "fiyat_birimi": "kurulum",
       "fiyat_alt_yazi": "Tek seferlik · İsteğe bağlı bakım: **yıllık 1.499 TL**",
       "ozellikler": [
         "Mobil uyumlu tanıtım sitesi",
         "Ana sayfa, hakkımızda, hizmetler, iletişim",
-        "9 fotoğrafa kadar basit galeri",
+        "Fotoğraf galerisi",
+        "Google Haritalar konumu ve WhatsApp butonu",
         "Aylık ücret yok, tek seferlik ödeme"
       ],
       "one_cikan": false
     },
     {
-      "ad": "Sahne",
+      "ad": "Kadraj",
       "kimin_icin": "Daha fazla içerik ve özellik isteyen, menüsünü ya da ürünlerini detaylı göstermek isteyen işletmeler için.",
-      "fiyat": "8.499 TL",
+      "fiyat": "9.499 TL",
       "fiyat_birimi": "kurulum",
       "fiyat_alt_yazi": "Tek seferlik · İlk yıl bakım dahil, sonra **yıllık 1.499 TL**",
       "ozellikler": [
         "Kapsamlı kurumsal web sitesi",
-        "12 fotoğrafa kadar galeri, menü ya da ürün sayfaları",
-        "İletişim ya da rezervasyon formu, Google Haritalar",
+        "Geniş galeri, menü ya da ürün sayfaları",
+        "İletişim ya da rezervasyon formu",
         "Temel SEO: başlıklar, site haritası, Google kaydı"
       ],
       "one_cikan": false
@@ -31,11 +32,11 @@
     {
       "ad": "Prestij",
       "kimin_icin": "Sitesiyle birlikte reklamla yeni müşteri kazanmak isteyen işletmeler için.",
-      "fiyat": "3.999 TL",
+      "fiyat": "11.999 TL",
       "fiyat_birimi": "/ ay",
-      "fiyat_alt_yazi": "Kurulum: **9.999 TL** · En az 3 ay",
+      "fiyat_alt_yazi": "Kurulum: **10.999 TL** · En az 3 ay",
       "ozellikler": [
-        "Sahne’deki kapsamlı site, bakım dahil",
+        "Kadraj’daki kapsamlı site, bakım dahil",
         "Kapsamlı SEO: yerel aramalar ve Search Console takibi",
         "Meta ve Google reklam yönetimi",
         "Kitle listeleri ve yeniden hedefleme",
@@ -61,9 +62,9 @@
     },
     {
       "ozellik": "Fotoğraf galerisi",
-      "vitrin": "9 fotoğrafa kadar",
-      "sahne": "12 fotoğrafa kadar",
-      "prestij": "12 fotoğrafa kadar"
+      "vitrin": "Basit galeri",
+      "sahne": "Geniş galeri",
+      "prestij": "Geniş galeri"
     },
     {
       "ozellik": "Menü ya da ürün sayfaları",
@@ -72,7 +73,13 @@
       "prestij": "Var"
     },
     {
-      "ozellik": "İletişim / rezervasyon formu, Google Haritalar",
+      "ozellik": "Google Haritalar konumu ve WhatsApp butonu",
+      "vitrin": "Var",
+      "sahne": "Var",
+      "prestij": "Var"
+    },
+    {
+      "ozellik": "İletişim / rezervasyon formu",
       "vitrin": "Yok",
       "sahne": "Var",
       "prestij": "Var"
@@ -135,8 +142,8 @@
   "ek_hizmetler": [
     {
       "ad": "Google ve Meta reklam yönetimi",
-      "fiyat": "4.999 TL / ay",
-      "fiyat_notu": "Prestij paketinde 3.999 TL",
+      "fiyat": "14.999 TL / ay",
+      "fiyat_notu": "Prestij paketinde 11.999 TL",
       "aciklama": "Siteniz varsa ya da sadece reklam istiyorsanız. Instagram, Facebook ve Google reklamları, yeniden hedefleme ve haftalık rapor. En az 3 ay; reklam bütçesi ayrıdır.",
       "buton_yazisi": "Teklif alın"
     },
@@ -168,6 +175,7 @@
   "notlar": [
     "Fiyatlara KDV dahil değildir.",
     "Sayfa sayısı ve içerik, ilk görüşmede ihtiyacınıza göre birlikte belirlenir.",
+    "Kaydırdıkça hikâye anlatan, animasyonlu özel tasarımlar (sahne tasarımı) paket fiyatlarına dahil değildir; kapsamına göre ayrıca fiyatlandırılır.",
     "Reklam bütçesi, alan adı ücreti ve uygulama mağazası hesap ücretleri fiyatlara dahil değildir.",
     "Temel SEO: başlıklar, site haritası ve Google kaydı. Kapsamlı SEO: buna ek olarak yerel aramalara göre düzen ve aylık takip. SEO, Google’da sıralama garantisi vermez.",
     "Aylık hizmetlerde en az 3 aylık çalışma süresi vardır."
